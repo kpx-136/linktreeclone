@@ -585,4 +585,17 @@ input {
 	#sec-4-text button {
 		width: 90%;
 	}
+	
+	#grid-image {
+        width: 90%;
+    }
+	
+	.box {
+		padding: 0;
+	}
+
+    .box i {
+        font-size: 50px;
+		margin: 0;
+    }
 }
