@@ -10,6 +10,7 @@ body {
 	background-color: #d2e823;
 	width: 100%;
 	font-family: 'Linik Sans', sans-serif;
+    font-size: 16px;
 }
 
 #topBar {
@@ -60,7 +61,7 @@ header {
 
 header h2 {
 	font-weight: 600;
-	font-size: 1.7rem;
+	font-size: clamp(1.3rem, 1.2vw, 1.7rem);
 	cursor: pointer;
 	margin: 30px 0px;
 }
@@ -85,7 +86,7 @@ nav div:hover {
 	background-color: #eff0ec;
 }
 
-@media (width <= 990px) {
+@media (max-width: 1100px) {
 	nav {
 		display: none;
 	}
@@ -99,10 +100,11 @@ nav div:hover {
 }
 
 #headerButtons button {
-	font-size: 1.1rem;
+	font-size: clamp(0.9rem, 1vw, 1rem);
 	padding: 20px 25px;
 	font-family: 'Linik Sans', sans-serif;
 	border: none;
+	cursor: pointer;
 }
 
 #login {
@@ -127,10 +129,139 @@ nav div:hover {
 	background-color: #262d3e;
 }
 
+section {
+	width: 100%
+}
+
+.section {
+	 display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    gap: 40px;
+}
+
 #sec-1 {
-	
+	color: #254f1a;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+#sec-1-container {
+	width: 80%;
+	margin: 0px auto;
+}
+
+#sec-1 h1 {
+	font-size: clamp(2.8rem, 5vw, 5.5rem);
+	font-weight: 900;
+	font-family: 'Linik Sans', sans-serif;
+	width: 100%;
+	margin: 20px auto;
+	padding: 0;
+	line-height: 1;
+	text-align: left;
+}
+
+#sec-1 p {
+	text-align: left;
+	font-size: clamp(1rem, 1.2vw, 1.25rem);;
+	letter-spacing: -0.05em;
+	font-weight: 500;
 }
 
 .section {
 	min-height: 100vh;
+	width: 100%;
+}
+
+.section h1 {
+	letter-spacing: -0.05em;
+}
+
+input {
+	text-align: left;
+}
+
+.inputField {
+	margin-top: 40px;
+	text-align: left;
+	display: flex;
+	gap: 5px;
+}
+
+.inputField input {
+	padding: 20px 15px;
+	font-size: 1rem;
+	border-radius: 8px;
+	border: none;
+	color: #757575;
+	font-weight: 500;
+	width: 50%;
+	font-family: inherit;
+}
+
+.inputField button {
+	color: #FFFFFF;
+	font-size: 1rem;
+	background-color: #254f1a;
+	border-radius: 30px;
+	padding: 20px 50px;
+	font-family: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+#sec-1-img {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sec-1-img div {
+    width: 85%;
+	border-radius: 30px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec-1-img img {
+	width: 100%;
+	margin: auto;
+}
+
+@media (max-width: 990px) {
+	
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sec-1,
+    #sec-1-img {
+        width: 100%;
+    }
+	
+	.inputField {
+		flex-direction: column;
+		gap: 10px;
+		text-align: center;
+	}
+	
+	.inputField input, .inputField button {
+		width: 95%;
+	}
+	
+}
+
+#sec-2 {
+	background-color: #2665d6;
 }
